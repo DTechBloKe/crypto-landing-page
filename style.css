@@ -1,0 +1,206 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color:rgb(1, 1, 29);  
+  margin: clamp(1em, 5vw, 5em);
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 20px;
+}
+
+nav .logo{
+    margin-left: 5.5rem;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 4rem;
+}
+
+ul li{
+    list-style-type: none;
+    margin:10px 20px;
+    transition-duration: 500ms;
+    
+ 
+}
+
+ul li a{
+    text-decoration: none;
+    color: wheat;
+    font-size: large;
+}
+.reg_botton{
+    display: flex;
+}
+.reg_botton li:nth-child(2){
+    background-color:rgb(40, 112, 184);
+    width: 6rem;
+    margin: auto;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.menu_bar, .close_menu{
+    display: none;
+}
+
+ul li:nth-child(4):hover{
+    display: flex;
+
+}
+
+ul li:hover{
+    cursor: pointer;
+    text-decoration: 2px underline rgb(105, 105, 255);
+    
+}
+
+/*nav bar mobile responsivenesss*/
+
+@media(max-width: 1000px){
+    nav ul{
+        background-color:rgb(39, 39, 67);
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        to:10rem;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+        transition: top 1s ease-in-out;
+        display: none;
+    }
+
+    nav .close_menu{
+        display: block;
+        position: absolute;
+        top:20px;
+        right: 20px;
+
+    }
+
+    nav .menu_bar{
+        display: block;
+        background-color: white;
+        color: aliceblue;
+
+    }
+
+    nav li a{
+        background: none;
+        color: white;
+        font-size: 1.6rem;
+    }
+
+    nav li{
+       position: relative;
+       top:5rem;
+    }
+
+    .reg_botton li:nth-child(2){
+        background-color:rgb(64, 64, 132);
+        padding: 10px;
+        width: 8.5rem;
+    }
+    .reg_botton li:nth-child(1){
+        border-right: 2px solid rgb(120, 110, 110);
+        width:8rem ;
+        text-align: center;
+    }
+
+    ul li:hover{
+        text-decoration: none;
+    }
+}
+
+/*first section of the website*/
+
+.hero_section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.cash_back{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(146, 132, 132);
+    padding: 5px;
+    max-width:20rem;
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 23px;
+
+}
+
+.cash_back p{
+    background-color: whitesmoke;
+    padding:2px;
+    color: rgb(146, 132, 132);
+    width:6rem ;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.hero_img img{
+    height: 500px;
+}
+
+.hero_text h1{
+    font-siz: 45px;
+    max-widt: 480px;
+    font-siz:4vw ;
+    font-size: clamp(30px, 5vw, 40px);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.hero_text p{
+    margin-top: 10px;
+}
+
+.hero_text button{
+    padding: 10px;
+    width:10rem;
+    border-radius: 20px;
+    font-size: larger;
+    color: white;
+    background-color: rgb(40, 112, 184);
+    border: none;
+    margin-top: 25px;
+}
+
+
+/*media query*/
+
+@media(max-width:1000px) {
+   .hero_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .hero_text h1{
+     
+   }
+
+   .hero_img img{
+    height: 200px;
+   }
+}
+
