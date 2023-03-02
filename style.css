@@ -164,9 +164,10 @@ ul li:hover{
     justify-content: space-around;
     background-color: rgb(146, 132, 132);
     min-height: 40px;
-    width:clamp(20rem, 25vw, 27vw);
+    max-width:20rem;
+    /*width:clamp(20rem, 25vw, 27vw);*/
     border-radius: 20px;
-    align-items: center;
+    align-items: cente;
     margin-bottom: 23px;
     font-size: clamp(10px, 15px, 16px);
 }
@@ -177,7 +178,7 @@ ul li:hover{
     color:rgb(192, 188, 188);
     width:6rem;
     border-radius: 20px;
-    margin: auto;
+    margin: 5px auto;
     text-align: center;
 }
 .cash_back h4{
@@ -240,17 +241,22 @@ ul li:hover{
     align-items: center;
    }
    .cash_back{
-    max-width: 70vw;
+    /*min-width:90vw;*/
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content:space-around;
+    align-items:center;
     margin-top: 20px;
+   }
+    .cash_back p{
+    color: red;
+    margin: 5px auto;
    }
    .cash_back h4{
     font-size:12px;
     margin: auto;
    }
+  
    .hero_text p{
     text-align: justify;
     margin-left: 3px;
@@ -352,6 +358,10 @@ ul li:hover{
         color: white;
         height: 450px;
     }
+    .learn-more-section .img img{
+    min-height: 13rem;
+    margin: auto;
+}
     .learn-mssg h1{
         font-size: clamp(1.2rem, 2rem, 2.4rem);
         font-weight: normal;
@@ -450,8 +460,7 @@ select{
 
 @media(max-width:1000px) {
     .rate-header p{
-        color: red;
-        width: 100%;
+        
 
     }
     .rate-form{
@@ -474,12 +483,17 @@ select{
         font-size: larger; 
         margin-top: 50px;
         border: none;
-        
     }
 
     #btn{
         width: 89%;
     
+    }
+
+    .rate-figure p {
+    margin: 0rem auto;
+    
+
     }
 }
 
@@ -525,9 +539,6 @@ select{
     color: white;
 
 }
-.card1, .card2, .card3{
-
-}
 button{
     background-color: rgb(40, 112, 184);
     height: 60px;
@@ -551,18 +562,27 @@ button:hover{
 
 @media(max-width:1000px) {
     .card-wrapper{
-        background-color: whitesmoke;
+        background-color:inherit;
         min-height: 1800px;
         position: relative;
         bottom:130px;
         width: 100%;
+    }
+    .header h2{
+        color: white;
+        border: 2px solid rgb(41, 39, 39);
+        margin-top: 5rem;
     }
     .card-container{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items:center;
-        line-height: 40px;
+        line-height: 30px;
+    }
+    .card-container h3{
+        font-size: 17px;
+        font-weight: normal;
     }
     .card1, .card2, .card3{
         display: flex;
@@ -570,16 +590,25 @@ button:hover{
         justify-content: center;
         align-items: center;
         background-color: gainsboro;
-        height: 450px; 
+        height: 400px; 
         width: 100%; 
         margin: 10px;
         text-align: center;
-        border-radius: 15px;
-        line-height: 60px;
+        border-radius: 0px 30px;
+        /*line-height: 60px;*/
         position: relative;
         top: 250px;
         border-radius: 2px solid gray;
         
+    }
+    .card1:hover, .card2:hover, .card3:hover{
+   display: none;
+
+}
+
+    .card-container button{
+        width: 10rem;
+        height: 3rem;
     }
     
 }
@@ -630,7 +659,6 @@ button:hover{
     }
     .section-4-wrapper p{
         width: 100%;
-        color: red;
     }
     .chart-container{
         display: flex;
@@ -643,10 +671,35 @@ button:hover{
         width: 100%;
         
     }
-    .chart-text p{
-        text-alig: center;
+    .chart-container .chart-text p{
+        margin:1.5rem 0rem;
         width: 100%;
+        
+
+        
     }
+    .chart-text{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        text-align:justify;
+
+    }
+    .chart-text p{
+        width: 100%;
+    
+    }
+
+    #learn_btn{
+    margin-top: 0rem;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(40, 112, 184);
+    border: none;
+    color: white;
+
+}
+
 }
 .section-5-wrapper{
     display: flex;
@@ -684,6 +737,14 @@ button:hover{
         align-items: center;
         width: 100%;
 
+    }
+    
+    .stat-container .stat-text p{
+        margin:1.5rem 0rem;
+        width: 100%;
+        
+
+        
     }
     .stat-text{
         width: 97%;
@@ -731,6 +792,27 @@ button:hover{
     .section-6-container .img img{
         width: 100%;
     }
+    .section-6-container .text{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:flex-start;
+        width: 100%;
+    }
+
+    .section-6-container .text p{
+        margin:2rem 0rem;
+        width: 100%;
+        
+
+        
+    }
+    .text button{
+        color: red;
+        
+    }
+
+
 }
 .subscribe-container{
     display: flex;
@@ -775,7 +857,7 @@ button:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-conten: center;
+        justify-content: center;
         min-height: 300px;
         width: 100%;
         
